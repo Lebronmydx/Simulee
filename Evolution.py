@@ -439,18 +439,18 @@ if __name__ == "__main__":
     #     "global": "%A",
     #     "shared": None
     # })
-    auto_test_target_function("./thundersvm-new-bug/new-fun.ll", "@_Z18c_smo_solve_kernelPKiPfS1_S1_S0_iffPKfS3_ifS1_i", {
-        "global": "%alpha",
-        "shared": "@_ZZ18c_smo_solve_kernelPKiPfS1_S1_S0_iffPKfS3_ifS1_iE10shared_mem"
-    }, used_default_dimension=True)
+    # auto_test_target_function("./thundersvm-new-bug/new-fun.ll", "@_Z18c_smo_solve_kernelPKiPfS1_S1_S0_iffPKfS3_ifS1_i", {
+    #    "global": "%alpha",
+    #    "shared": "@_ZZ18c_smo_solve_kernelPKiPfS1_S1_S0_iffPKfS3_ifS1_iE10shared_mem"
+    #}, used_default_dimension=True)
     # auto_test_target_function("./kaldi-new-bug/new-func.ll", "@_Z17_add_diag_vec_matfPfiiiPKfS1_iif", {
     #     "global": "%mat",
     #     "shared": None
     # })
-    # auto_test_target_function("./kaldi-new-bug/new-func.ll", "@_Z20_trace_mat_mat_transPKfS0_iiiiPf", {
-    #     "global": None,
-    #     "shared": "@_ZZ20_trace_mat_mat_transPKfS0_iiiiPfE4ssum"
-    # })
+     auto_test_target_function("./kaldi-new-bug/new-func.ll", "@_Z20_trace_mat_mat_transPKfS0_iiiiPf", {
+         "global": None,
+         "shared": "@_ZZ20_trace_mat_mat_transPKfS0_iiiiPfE4ssum"
+     })
     # auto_test_target_function("./kaldi-new-bug/new-func.ll", "@_Z13_copy_upp_lowPfii", {
     #     "global": "%A",
     #     "shared": None

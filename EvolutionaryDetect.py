@@ -115,7 +115,14 @@ def test_sync_cudpp_sparseMatrixVectorSetFlags():
 
 
 if __name__ == "__main__":
-    test_gunrock_join2()
+    # test_convenet2_kDotProduct()
+    # test_convnet2_kTile()
+    # test_thundersvm_c_smo_solve_kernel()
+    # test_copy_upp_low()
+    # test_copy_low_upp()
+	# test_add_diag_vec_mat()
+    # test_device_global()
+    # test_gunrock_join2()
     # test_gunrock_join()
     # test_sum_reduced()
     # test_sync_cudpp_sparseMatrixVectorSetFlags()
