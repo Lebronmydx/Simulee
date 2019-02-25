@@ -1,3 +1,8 @@
+The first generation is start with 0. The reason why the algorithm can be converged in four generation (setting generation to 3) is that the performance
+of fitness function is good. Secondary score gives a good inspiration to the whole algorithm.
+
+---------------------------------------------------------------------
+
 device_global@Gklee_Test/read_write_race0.cu   0.627186059952
 _add_diag_vec_mat@kaldi/cu-kernels.cu          1.89538502693
 _copy_low_upp@kaldi/cu-kernels.cu              1.59333300591
