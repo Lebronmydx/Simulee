@@ -41,6 +41,7 @@ test_thundersvm_c_smo_solve_kernel()
 gunrock:
 ```
 test_gunrock_join()
+test_gunrock_join2()
 ```
 
 CUDA-CNN
