@@ -108,13 +108,13 @@ declare void @__syncthreads() section "__device__"
 
 !llvm.dbg.cu = !{!0}
 
-!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"new-func.cpp", metadata !"/home/mingyuanwu/cudpp-new-bug", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp] [DW_LANG_C_plus_plus]
+!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"new-func.cpp", metadata !"/home/%PATH%/cudpp-new-bug", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ] [/home/%PATH%/cudpp-new-bug/new-func.cpp] [DW_LANG_C_plus_plus]
 !1 = metadata !{metadata !2}
 !2 = metadata !{i32 0}
 !3 = metadata !{metadata !4}
 !4 = metadata !{metadata !5}
 !5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"sparseMatrixVectorSetFlags", metadata !"sparseMatrixVectorSetFlags", metadata !"_Z26sparseMatrixVectorSetFlagsPjPKjj", metadata !6, i32 2, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i32*, i32)* @_Z26sparseMatrixVectorSetFlagsPjPKjj, null, null, metadata !1, i32 7} ; [ DW_TAG_subprogram ] [line 2] [def] [scope 7] [sparseMatrixVectorSetFlags]
-!6 = metadata !{i32 786473, metadata !"new-func.cpp", metadata !"/home/mingyuanwu/cudpp-new-bug", null} ; [ DW_TAG_file_type ]
+!6 = metadata !{i32 786473, metadata !"new-func.cpp", metadata !"/home/%PATH%/cudpp-new-bug", null} ; [ DW_TAG_file_type ]
 !7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
 !8 = metadata !{null, metadata !9, metadata !11, metadata !10}
 !9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned int]
@@ -128,24 +128,24 @@ declare void @__syncthreads() section "__device__"
 !17 = metadata !{i32 786689, metadata !5, metadata !"numRows", metadata !6, i32 50331653, metadata !10, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [numRows] [line 5]
 !18 = metadata !{i32 5, i32 0, metadata !5, null}
 !19 = metadata !{i32 786688, metadata !20, metadata !"iGlobal", metadata !6, i32 8, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [iGlobal] [line 8]
-!20 = metadata !{i32 786443, metadata !5, i32 7, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp]
+!20 = metadata !{i32 786443, metadata !5, i32 7, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cudpp-new-bug/new-func.cpp]
 !21 = metadata !{i32 8, i32 0, metadata !20, null}
 !22 = metadata !{i32 786688, metadata !20, metadata !"isLastBlock", metadata !6, i32 10, metadata !23, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [isLastBlock] [line 10]
 !23 = metadata !{i32 786468, null, metadata !"bool", null, i32 0, i64 8, i64 8, i64 0, i32 0, i32 2} ; [ DW_TAG_base_type ] [bool] [line 0, size 8, align 8, offset 0, enc DW_ATE_boolean]
 !24 = metadata !{i32 10, i32 0, metadata !20, null}
 !25 = metadata !{i32 786688, metadata !26, metadata !"i", metadata !6, i32 12, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 12]
-!26 = metadata !{i32 786443, metadata !20, i32 12, i32 0, metadata !6, i32 1} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp]
+!26 = metadata !{i32 786443, metadata !20, i32 12, i32 0, metadata !6, i32 1} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cudpp-new-bug/new-func.cpp]
 !27 = metadata !{i32 12, i32 0, metadata !26, null}
 !28 = metadata !{i32 14, i32 0, metadata !29, null}
-!29 = metadata !{i32 786443, metadata !26, i32 13, i32 0, metadata !6, i32 2} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp]
+!29 = metadata !{i32 786443, metadata !26, i32 13, i32 0, metadata !6, i32 2} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cudpp-new-bug/new-func.cpp]
 !30 = metadata !{i32 16, i32 0, metadata !31, null}
-!31 = metadata !{i32 786443, metadata !29, i32 15, i32 0, metadata !6, i32 3} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp]
+!31 = metadata !{i32 786443, metadata !29, i32 15, i32 0, metadata !6, i32 3} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cudpp-new-bug/new-func.cpp]
 !32 = metadata !{i32 18, i32 0, metadata !33, null}
-!33 = metadata !{i32 786443, metadata !31, i32 17, i32 0, metadata !6, i32 4} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp]
+!33 = metadata !{i32 786443, metadata !31, i32 17, i32 0, metadata !6, i32 4} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cudpp-new-bug/new-func.cpp]
 !34 = metadata !{i32 19, i32 0, metadata !33, null}
 !35 = metadata !{i32 20, i32 0, metadata !31, null}
 !36 = metadata !{i32 23, i32 0, metadata !37, null}
-!37 = metadata !{i32 786443, metadata !29, i32 22, i32 0, metadata !6, i32 5} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cudpp-new-bug/new-func.cpp]
+!37 = metadata !{i32 786443, metadata !29, i32 22, i32 0, metadata !6, i32 5} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cudpp-new-bug/new-func.cpp]
 !38 = metadata !{i32 26, i32 0, metadata !29, null}
 !39 = metadata !{i32 27, i32 0, metadata !29, null}
 !40 = metadata !{i32 29, i32 0, metadata !20, null}

@@ -280,13 +280,13 @@ declare void @__syncthreads() section "__device__"
 
 !llvm.dbg.cu = !{!0}
 
-!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"new-func.cpp", metadata !"/home/mingyuanwu/cuda-cudamat-new-bug", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !18} ; [ DW_TAG_compile_unit ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp] [DW_LANG_C_plus_plus]
+!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"new-func.cpp", metadata !"/home/%PATH%/cuda-cudamat-new-bug", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !18} ; [ DW_TAG_compile_unit ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp] [DW_LANG_C_plus_plus]
 !1 = metadata !{metadata !2}
 !2 = metadata !{i32 0}
 !3 = metadata !{metadata !4}
 !4 = metadata !{metadata !5, metadata !15}
 !5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"kRandomGaussian", metadata !"kRandomGaussian", metadata !"_Z15kRandomGaussianPjPyPfj", metadata !6, i32 23, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i32*, i64*, float*, i32)* @_Z15kRandomGaussianPjPyPfj, null, null, metadata !1, i32 23} ; [ DW_TAG_subprogram ] [line 23] [def] [kRandomGaussian]
-!6 = metadata !{i32 786473, metadata !"new-func.cpp", metadata !"/home/mingyuanwu/cuda-cudamat-new-bug", null} ; [ DW_TAG_file_type ]
+!6 = metadata !{i32 786473, metadata !"new-func.cpp", metadata !"/home/%PATH%/cuda-cudamat-new-bug", null} ; [ DW_TAG_file_type ]
 !7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
 !8 = metadata !{null, metadata !9, metadata !11, metadata !13, metadata !10}
 !9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ] [line 0, size 64, align 64, offset 0] [from unsigned int]
@@ -310,7 +310,7 @@ declare void @__syncthreads() section "__device__"
 !27 = metadata !{i32 786689, metadata !5, metadata !"gData", metadata !6, i32 50331671, metadata !13, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [gData] [line 23]
 !28 = metadata !{i32 786689, metadata !5, metadata !"numElements", metadata !6, i32 67108887, metadata !10, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [numElements] [line 23]
 !29 = metadata !{i32 786688, metadata !30, metadata !"idx", metadata !6, i32 24, metadata !31, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [idx] [line 24]
-!30 = metadata !{i32 786443, metadata !5, i32 23, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!30 = metadata !{i32 786443, metadata !5, i32 23, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !31 = metadata !{i32 786470, null, metadata !"", null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !10} ; [ DW_TAG_const_type ] [line 0, size 0, align 0, offset 0] [from unsigned int]
 !32 = metadata !{i32 24, i32 0, metadata !30, null}
 !33 = metadata !{i32 786688, metadata !30, metadata !"rndWord", metadata !6, i32 25, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [rndWord] [line 25]
@@ -323,10 +323,10 @@ declare void @__syncthreads() section "__device__"
 !40 = metadata !{i32 786688, metadata !30, metadata !"R", metadata !6, i32 28, metadata !14, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [R] [line 28]
 !41 = metadata !{i32 786688, metadata !30, metadata !"T", metadata !6, i32 28, metadata !14, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [T] [line 28]
 !42 = metadata !{i32 786688, metadata !43, metadata !"i", metadata !6, i32 29, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 29]
-!43 = metadata !{i32 786443, metadata !30, i32 29, i32 0, metadata !6, i32 1} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!43 = metadata !{i32 786443, metadata !30, i32 29, i32 0, metadata !6, i32 1} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !44 = metadata !{i32 29, i32 0, metadata !43, null}
 !45 = metadata !{i32 30, i32 0, metadata !46, null}
-!46 = metadata !{i32 786443, metadata !43, i32 29, i32 0, metadata !6, i32 2} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!46 = metadata !{i32 786443, metadata !43, i32 29, i32 0, metadata !6, i32 2} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !47 = metadata !{i32 31, i32 0, metadata !46, null}
 !48 = metadata !{i32 32, i32 0, metadata !46, null}
 !49 = metadata !{i32 33, i32 0, metadata !46, null}
@@ -344,15 +344,15 @@ declare void @__syncthreads() section "__device__"
 !61 = metadata !{i32 786689, metadata !15, metadata !"width", metadata !6, i32 50331691, metadata !10, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [width] [line 43]
 !62 = metadata !{i32 786689, metadata !15, metadata !"height", metadata !6, i32 67108907, metadata !10, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [height] [line 43]
 !63 = metadata !{i32 786688, metadata !64, metadata !"cur_min", metadata !6, i32 45, metadata !14, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [cur_min] [line 45]
-!64 = metadata !{i32 786443, metadata !15, i32 43, i32 0, metadata !6, i32 3} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!64 = metadata !{i32 786443, metadata !15, i32 43, i32 0, metadata !6, i32 3} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !65 = metadata !{i32 45, i32 0, metadata !64, null}
 !66 = metadata !{i32 786688, metadata !64, metadata !"val", metadata !6, i32 46, metadata !14, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [val] [line 46]
 !67 = metadata !{i32 46, i32 0, metadata !64, null}
 !68 = metadata !{i32 786688, metadata !69, metadata !"i", metadata !6, i32 48, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 48]
-!69 = metadata !{i32 786443, metadata !64, i32 48, i32 0, metadata !6, i32 4} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!69 = metadata !{i32 786443, metadata !64, i32 48, i32 0, metadata !6, i32 4} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !70 = metadata !{i32 48, i32 0, metadata !69, null}
 !71 = metadata !{i32 49, i32 0, metadata !72, null}
-!72 = metadata !{i32 786443, metadata !69, i32 48, i32 0, metadata !6, i32 5} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!72 = metadata !{i32 786443, metadata !69, i32 48, i32 0, metadata !6, i32 5} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !73 = metadata !{i32 51, i32 0, metadata !72, null}
 !74 = metadata !{i32 52, i32 0, metadata !72, null}
 !75 = metadata !{i32 53, i32 0, metadata !72, null}
@@ -360,9 +360,9 @@ declare void @__syncthreads() section "__device__"
 !77 = metadata !{i32 57, i32 0, metadata !64, null}
 !78 = metadata !{i32 59, i32 0, metadata !64, null}
 !79 = metadata !{i32 60, i32 0, metadata !80, null}
-!80 = metadata !{i32 786443, metadata !64, i32 59, i32 0, metadata !6, i32 6} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!80 = metadata !{i32 786443, metadata !64, i32 59, i32 0, metadata !6, i32 6} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !81 = metadata !{i32 786688, metadata !82, metadata !"i", metadata !6, i32 62, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [i] [line 62]
-!82 = metadata !{i32 786443, metadata !80, i32 62, i32 0, metadata !6, i32 7} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/cuda-cudamat-new-bug/new-func.cpp]
+!82 = metadata !{i32 786443, metadata !80, i32 62, i32 0, metadata !6, i32 7} ; [ DW_TAG_lexical_block ] [/home/%PATH%/cuda-cudamat-new-bug/new-func.cpp]
 !83 = metadata !{i32 62, i32 0, metadata !82, null}
 !84 = metadata !{i32 63, i32 0, metadata !82, null}
 !85 = metadata !{i32 64, i32 0, metadata !82, null}

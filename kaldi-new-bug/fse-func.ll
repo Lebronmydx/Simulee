@@ -87,13 +87,13 @@ declare void @__syncthreads() section "__device__"
 
 !llvm.dbg.cu = !{!0}
 
-!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"fse-func.cpp", metadata !"/home/mingyuanwu/kaldi-new-bug", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ] [/home/mingyuanwu/kaldi-new-bug/fse-func.cpp] [DW_LANG_C_plus_plus]
+!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"fse-func.cpp", metadata !"%PATH%/kaldi-new-bug", metadata !"clang version 3.2 (tags/RELEASE_32/final)", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ] [%PATH%/kaldi-new-bug/fse-func.cpp] [DW_LANG_C_plus_plus]
 !1 = metadata !{metadata !2}
 !2 = metadata !{i32 0}
 !3 = metadata !{metadata !4}
 !4 = metadata !{metadata !5}
 !5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"_sum_reduce", metadata !"_sum_reduce", metadata !"_Z11_sum_reducePd", metadata !6, i32 2, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, double (double*)* @_Z11_sum_reducePd, null, null, metadata !1, i32 2} ; [ DW_TAG_subprogram ] [line 2] [def] [_sum_reduce]
-!6 = metadata !{i32 786473, metadata !"fse-func.cpp", metadata !"/home/mingyuanwu/kaldi-new-bug", null} ; [ DW_TAG_file_type ]
+!6 = metadata !{i32 786473, metadata !"fse-func.cpp", metadata !"%PATH%/kaldi-new-bug", null} ; [ DW_TAG_file_type ]
 !7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ] [line 0, size 0, align 0, offset 0] [from ]
 !8 = metadata !{metadata !9, metadata !10}
 !9 = metadata !{i32 786468, null, metadata !"double", null, i32 0, i64 64, i64 64, i64 0, i32 0, i32 4} ; [ DW_TAG_base_type ] [double] [line 0, size 64, align 64, offset 0, enc DW_ATE_float]
@@ -101,21 +101,21 @@ declare void @__syncthreads() section "__device__"
 !11 = metadata !{i32 786689, metadata !5, metadata !"buffer", metadata !6, i32 16777218, metadata !10, i32 0, i32 0} ; [ DW_TAG_arg_variable ] [buffer] [line 2]
 !12 = metadata !{i32 2, i32 0, metadata !5, null}
 !13 = metadata !{i32 786688, metadata !14, metadata !"nTotalThreads", metadata !6, i32 4, metadata !15, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [nTotalThreads] [line 4]
-!14 = metadata !{i32 786443, metadata !5, i32 2, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/kaldi-new-bug/fse-func.cpp]
+!14 = metadata !{i32 786443, metadata !5, i32 2, i32 0, metadata !6, i32 0} ; [ DW_TAG_lexical_block ] [%PATH%/kaldi-new-bug/fse-func.cpp]
 !15 = metadata !{i32 786468, null, metadata !"int", null, i32 0, i64 32, i64 32, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ] [int] [line 0, size 32, align 32, offset 0, enc DW_ATE_signed]
 !16 = metadata !{i32 4, i32 0, metadata !14, null}
 !17 = metadata !{i32 5, i32 0, metadata !14, null}
 !18 = metadata !{i32 7, i32 0, metadata !14, null}
 !19 = metadata !{i32 786688, metadata !20, metadata !"halfPoint", metadata !6, i32 8, metadata !15, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [halfPoint] [line 8]
-!20 = metadata !{i32 786443, metadata !14, i32 7, i32 0, metadata !6, i32 1} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/kaldi-new-bug/fse-func.cpp]
+!20 = metadata !{i32 786443, metadata !14, i32 7, i32 0, metadata !6, i32 1} ; [ DW_TAG_lexical_block ] [%PATH%/kaldi-new-bug/fse-func.cpp]
 !21 = metadata !{i32 8, i32 0, metadata !20, null}
 !22 = metadata !{i32 10, i32 0, metadata !20, null}
 !23 = metadata !{i32 786688, metadata !24, metadata !"temp", metadata !6, i32 12, metadata !9, i32 0, i32 0} ; [ DW_TAG_auto_variable ] [temp] [line 12]
-!24 = metadata !{i32 786443, metadata !20, i32 10, i32 0, metadata !6, i32 2} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/kaldi-new-bug/fse-func.cpp]
+!24 = metadata !{i32 786443, metadata !20, i32 10, i32 0, metadata !6, i32 2} ; [ DW_TAG_lexical_block ] [%PATH%/kaldi-new-bug/fse-func.cpp]
 !25 = metadata !{i32 12, i32 0, metadata !24, null}
 !26 = metadata !{i32 13, i32 0, metadata !24, null}
 !27 = metadata !{i32 14, i32 0, metadata !28, null}
-!28 = metadata !{i32 786443, metadata !24, i32 13, i32 0, metadata !6, i32 3} ; [ DW_TAG_lexical_block ] [/home/mingyuanwu/kaldi-new-bug/fse-func.cpp]
+!28 = metadata !{i32 786443, metadata !24, i32 13, i32 0, metadata !6, i32 3} ; [ DW_TAG_lexical_block ] [%PATH%/kaldi-new-bug/fse-func.cpp]
 !29 = metadata !{i32 15, i32 0, metadata !28, null}
 !30 = metadata !{i32 16, i32 0, metadata !24, null}
 !31 = metadata !{i32 17, i32 0, metadata !24, null}
