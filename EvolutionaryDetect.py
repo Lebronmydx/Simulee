@@ -120,7 +120,7 @@ if __name__ == "__main__":
     # test_thundersvm_c_smo_solve_kernel()
     # test_copy_upp_low()
     # test_copy_low_upp()
-	# test_add_diag_vec_mat()
+    test_add_diag_vec_mat()
     # test_device_global()
     # test_gunrock_join2()
     # test_gunrock_join()
