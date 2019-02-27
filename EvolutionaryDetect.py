@@ -79,6 +79,13 @@ def test_gunrock_join2():
     })
 
 
+def test_gunrock_xmrig():
+    auto_test_target_function_advanced("./xmrig/new-func.ll", "@_Z27cryptonight_core_gpu_phase3iiiPKjPjS1_", {
+        'global': None,
+        'shared': "@_ZZ27cryptonight_core_gpu_phase3iiiPKjPjS1_E12sharedMemory",
+    })
+
+
 def test_convnet2_kTile():
     auto_test_target_function("./cuda-convnet2-new-bug/new-func.ll", "@_Z5kTilePKfPfjjjj", {
         "global": "%tgt",
@@ -115,16 +122,10 @@ def test_sync_cudpp_sparseMatrixVectorSetFlags():
 
 
 if __name__ == "__main__":
-    # test_convenet2_kDotProduct()
-    # test_convnet2_kTile()
-    # test_thundersvm_c_smo_solve_kernel()
-    # test_copy_upp_low()
-    # test_copy_low_upp()
-    test_add_diag_vec_mat()
-    # test_device_global()
+    # test_gunrock_xmrig()
     # test_gunrock_join2()
     # test_gunrock_join()
-    # test_sum_reduced()
+    test_sum_reduced()
     # test_sync_cudpp_sparseMatrixVectorSetFlags()
     # test_sync_FindMaxCorr()
     # test_sync_cuda_cnn_g_geptCost_3()

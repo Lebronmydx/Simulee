@@ -97,14 +97,14 @@ def construct_memory_execute_mode(blocks, threads, global_size, shared_size, raw
                                                (threads.limit_x, threads.limit_y, threads.limit_z)))
                     if is_global:
                         if current_index >= len(global_memory.list):
-                            print "There is outraged here! plz noted."
+                            # print "There is outraged here! plz noted."
                             continue
                         global_memory.list[current_index].set_by_order(saved_action,
                                                                        visit_order_for_global_memory[current_index])
                         current_visited_global_memory_index.push(current_index)
                     else:
                         if current_index >= len(global_memory.list):
-                            print "There is outraged here! plz noted."
+                            # print "There is outraged here! plz noted."
                             continue
                         shared_memory.list[current_index].set_by_order(saved_action,
                                                                        visit_order_for_shared_memory[current_index])
@@ -117,6 +117,7 @@ def construct_memory_execute_mode_for_barrier(blocks, threads, global_size, shar
                                   shared_parser, global_parser, global_env=None, should_print=True):
     main_memory = arguments['main_memory']
     global_memory = GlobalMemory(global_size)
+    redundant_barrier = list()
     warp_size = DataType("i32")
     warp_size.set_value(32)
     if global_env is None:
@@ -208,14 +209,14 @@ def construct_memory_execute_mode_for_barrier(blocks, threads, global_size, shar
                                                (threads.limit_x, threads.limit_y, threads.limit_z)))
                     if is_global:
                         if current_index >= len(global_memory.list):
-                            print "There is outraged here! plz noted."
+                            # print "There is outraged here! plz noted."
                             continue
                         global_memory.list[current_index].set_by_order(saved_action,
                                                                        visit_order_for_global_memory[current_index])
                         current_visited_global_memory_index.push(current_index)
                     else:
                         if current_index >= len(shared_memory.list):
-                            print "There is outraged here! plz noted."
+                            # print "There is outraged here! plz noted."
                             continue
                         shared_memory.list[current_index].set_by_order(saved_action,
                                                                        visit_order_for_shared_memory[current_index])
@@ -228,16 +229,15 @@ def construct_memory_execute_mode_for_barrier(blocks, threads, global_size, shar
     has_no_necessarily(global_barr, global_memory, global_mem, program_flow, global_flag)
     global_barr.clear()
     global_mem.clear()
-    necessity = True
     for barr in shared_flag:
         if barr in global_flag and (shared_flag[barr] and global_flag[barr]):
-            necessity = False
+            redundant_barrier.append(barr)
         elif barr not in global_flag and shared_flag[barr]:
-            necessity = False
+            redundant_barrier.append(barr)
     for barr in global_flag:
         if barr not in shared_flag and global_flag[barr]:
-            necessity = False
-    if not necessity:
+            redundant_barrier.append(barr)
+    for barr in redundant_barrier:
         print '-------------------------------------------------------------------------------'
         print 'the barrier ' + barr + ' is not necessary.'
         print '-------------------------------------------------------------------------------'
