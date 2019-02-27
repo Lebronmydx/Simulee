@@ -67,7 +67,7 @@ Positive feedback from authors:
 https://github.com/cudpp/cudpp/issues/180
 https://github.com/Celebrandil/CudaSift/issues/38
 https://github.com/gunrock/gunrock/issues/452
-https://github.com/gunrock/gunrock/issues/452
+https://github.com/kaldi-asr/kaldi/issues/3036
 ```
 
 Raw bug log located in
