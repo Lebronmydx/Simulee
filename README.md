@@ -21,7 +21,7 @@ The kernel function is related to table 4 in performance.log.
 # Introduction
 In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs and related to a specify kernel function. You will need Python 2.7 to run them. No other dependency is needed.
 
-# Detailed instruction
+### Detailed instruction
 kaldi:
 ```
 test_sum_reduced()
