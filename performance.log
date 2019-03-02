@@ -4,19 +4,20 @@ of fitness function is good. Secondary score gives a good inspiration to the who
 The population and generation is setting at generate_initialized_setting@Evolution.py, line 339.  We can see from below experiment that arguments have
 little impact to the performance of algorithm.
 
+Noted: This data is related to table 4.
 ---------------------------------------------------------------------
 
-device_global@Gklee_Test/read_write_race0.cu   0.627186059952
-_add_diag_vec_mat@kaldi/cu-kernels.cu          1.89538502693
-_copy_low_upp@kaldi/cu-kernels.cu              1.59333300591
-_splice@kaldi/cu-kernels.cu                    1.93862199783
-_copy_upp_low@kaldi/cu-kernels.cu              1.47234892845
-Join@gunrock/join.cuh                          6.25341415405
-c_smo_solve_kernel@thundersvm/smo-kernels.cu   7.8977749348
-kTile@cuda-convnet2/nvmatrix_kernels.cu        2.0280020237
-kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  1.58654117584
-_trace_mat_mat_trans@kaldi/cu-kernels.cu       3.75331711769
-convolve2@arrayfire/convolve.hpp               4.3802690506
+1  device_global@Gklee_Test/read_write_race0.cu   0.627186059952
+2  _add_diag_vec_mat@kaldi/cu-kernels.cu          1.89538502693
+3  _copy_low_upp@kaldi/cu-kernels.cu              1.59333300591
+4  _splice@kaldi/cu-kernels.cu                    1.93862199783
+5  _copy_upp_low@kaldi/cu-kernels.cu              1.47234892845
+6  Join@gunrock/join.cuh                          6.25341415405
+7  c_smo_solve_kernel@thundersvm/smo-kernels.cu   7.8977749348
+8  kTile@cuda-convnet2/nvmatrix_kernels.cu        2.0280020237
+9  kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  1.58654117584
+10 _trace_mat_mat_trans@kaldi/cu-kernels.cu       3.75331711769
+11 convolve2@arrayfire/convolve.hpp               4.3802690506
 
 
 arguments: {
@@ -26,17 +27,17 @@ arguments: {
 
 ---------------------------------------------------------------------
 
-device_global@Gklee_Test/read_write_race0.cu   0.336097002029
-_add_diag_vec_mat@kaldi/cu-kernels.cu          2.3871281147
-_copy_low_upp@kaldi/cu-kernels.cu              0.82728099823
-_splice@kaldi/cu-kernels.cu                    1.16035079956
-_copy_upp_low@kaldi/cu-kernels.cu              1.14414095879
-Join@gunrock/join.cuh                          2.89437294006
-c_smo_solve_kernel@thundersvm/smo-kernels.cu   4.28621101379
-kTile@cuda-convnet2/nvmatrix_kernels.cu        0.474329948425
-kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  0.762001037598
-_trace_mat_mat_trans@kaldi/cu-kernels.cu       2.00656104088
-convolve2@arrayfire/convolve.hpp               1.73516201973
+1  device_global@Gklee_Test/read_write_race0.cu   0.336097002029
+2  _add_diag_vec_mat@kaldi/cu-kernels.cu          2.3871281147
+3  _copy_low_upp@kaldi/cu-kernels.cu              0.82728099823
+4  _splice@kaldi/cu-kernels.cu                    1.16035079956
+5  _copy_upp_low@kaldi/cu-kernels.cu              1.14414095879
+6  Join@gunrock/join.cuh                          2.89437294006
+7  c_smo_solve_kernel@thundersvm/smo-kernels.cu   4.28621101379
+8  kTile@cuda-convnet2/nvmatrix_kernels.cu        0.474329948425
+9  kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  0.762001037598
+10 _trace_mat_mat_trans@kaldi/cu-kernels.cu       2.00656104088
+11 convolve2@arrayfire/convolve.hpp               1.73516201973
 
 
 arguments: {
@@ -46,17 +47,17 @@ arguments: {
 
 ---------------------------------------------------------------------
 
-device_global@Gklee_Test/read_write_race0.cu   0.564728021622
-_add_diag_vec_mat@kaldi/cu-kernels.cu          0.358702898026
-_copy_low_upp@kaldi/cu-kernels.cu              1.38759613037
-_splice@kaldi/cu-kernels.cu                    1.14744997025
-_copy_upp_low@kaldi/cu-kernels.cu              0.894185066223
-Join@gunrock/join.cuh                          1.15443992615
-c_smo_solve_kernel@thundersvm/smo-kernels.cu   3.07424712181
-kTile@cuda-convnet2/nvmatrix_kernels.cu        2.01954483986
-kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  0.587056159973
-_trace_mat_mat_trans@kaldi/cu-kernels.cu       6.58713102341
-convolve2@arrayfire/convolve.hpp               1.78001308441
+1  device_global@Gklee_Test/read_write_race0.cu   0.564728021622
+2  _add_diag_vec_mat@kaldi/cu-kernels.cu          0.358702898026
+3  _copy_low_upp@kaldi/cu-kernels.cu              1.38759613037
+4  _splice@kaldi/cu-kernels.cu                    1.14744997025
+5  _copy_upp_low@kaldi/cu-kernels.cu              0.894185066223
+6  Join@gunrock/join.cuh                          1.15443992615
+7  c_smo_solve_kernel@thundersvm/smo-kernels.cu   3.07424712181
+8  kTile@cuda-convnet2/nvmatrix_kernels.cu        2.01954483986
+9  kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  0.587056159973
+10 _trace_mat_mat_trans@kaldi/cu-kernels.cu       6.58713102341
+11convolve2@arrayfire/convolve.hpp               1.78001308441
 
 
 arguments: {
