@@ -71,10 +71,13 @@ https://github.com/gunrock/gunrock/issues/452
 https://github.com/kaldi-asr/kaldi/issues/3036
 ```
 
+# Raw bug log
 Raw bug log located in
 ```
 ./raw_data_report_script
 ```
+
+# Bug log parser
 log-paser.py is used to parsed raw bug log to get a report.
 ```
 ./raw_data_report_script/log-parser.py
