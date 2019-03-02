@@ -14,14 +14,14 @@ Total： 10 Bugs
 | gunrock       | 2                           |https://github.com/gunrock/gunrock/issues/452    |
 | kaldi         | 1                           |https://github.com/kaldi-asr/kaldi/issues/3036   |
 
-# Introduction
-In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs and related to a specify kernel function. You will need Python 2.7 to run them. No other dependency is needed.
-
 # Performance in different setting
 Please see "performance.log" file. 
 The kernel function is related to table 4 in performance.log.
 
-# Detail report
+# Introduction
+In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs and related to a specify kernel function. You will need Python 2.7 to run them. No other dependency is needed.
+
+# Detailed instruction
 kaldi:
 ```
 test_sum_reduced()
