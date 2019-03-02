@@ -15,7 +15,7 @@ Total： 10 Bugs
 | kaldi         | 1                           |https://github.com/kaldi-asr/kaldi/issues/3036   |
 
 # Introduction
-In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs.
+In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs and related to a specify kernel function. You will need Python 2.7 to run them. No other dependency is needed.
 
 # Performance in different setting
 Please see "performance.log" file. 
