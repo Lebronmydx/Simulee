@@ -14,14 +14,14 @@ Total： 10 Bugs
 | gunrock       | 2                           |https://github.com/gunrock/gunrock/issues/452    |
 | kaldi         | 1                           |https://github.com/kaldi-asr/kaldi/issues/3036   |
 
-# Introduction
-In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs.
-
 # Performance in different setting
 Please see "performance.log" file. 
 The kernel function is related to table 4 in performance.log.
 
-# Detail report
+# Introduction
+In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs and related to a specify kernel function. You will need Python 2.7 to run them. No other dependency is needed.
+
+### Detailed instruction
 kaldi:
 ```
 test_sum_reduced()
@@ -41,6 +41,7 @@ test_thundersvm_c_smo_solve_kernel()
 gunrock:
 ```
 test_gunrock_join()
+test_gunrock_xmrig()
 test_gunrock_join2()
 ```
 
@@ -70,9 +71,16 @@ https://github.com/gunrock/gunrock/issues/452
 https://github.com/kaldi-asr/kaldi/issues/3036
 ```
 
+# Raw bug log
 Raw bug log located in
 ```
 ./raw_data_report_script
+```
+
+# Bug log parser
+log-paser.py is used to parsed raw bug log to get a report.
+```
+./raw_data_report_script/log-parser.py
 ```
 
 
