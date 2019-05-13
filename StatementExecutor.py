@@ -78,7 +78,10 @@ def get_element_ptr(arguments, kernel_codes, main_memory, global_env, local_env)
         if target.memory_index is not None and not tmp_index.is_depend_on_running_time:
             result_tmp.set_memory_index(num(tmp_index.get_value()) + num(target.memory_index))
         elif not tmp_index.is_depend_on_running_time:
-            result_tmp.set_memory_index(num(tmp_index.get_value()))
+            try:
+                result_tmp.set_memory_index(num(tmp_index.get_value()))
+            except:
+                result_tmp.set_memory_index(0)  # initialized load a new shared memory
         else:
             result_tmp.set_memory_index(None)
         result_tmp.set_value(target.get_value())
@@ -239,13 +242,22 @@ def calculation_factory(cac_flag):
         elif cac_flag == 2:
             tmp_result.set_value(num(number_one.get_value()) * num(number_two.get_value()))
         elif cac_flag == 3:
-            tmp_result.set_value(num(number_one.get_value()) / num(number_two.get_value()))
+            if num(number_two.get_value()) == 0:
+                tmp_result.set_value(0)  # divide 0
+            else:
+                tmp_result.set_value(num(number_one.get_value()) / num(number_two.get_value()))
         elif cac_flag == 4:
             tmp_result.set_value(num(number_one.get_value()) % num(number_two.get_value()))
         elif cac_flag == 5:
             tmp_result.set_value(num(number_one.get_value()) >> num(number_two.get_value()))
         elif cac_flag == 6:
-            tmp_result.set_value(num(number_one.get_value()) & num(number_two.get_value()))
+            if tmp_result.data_type == 'i1':
+                if number_one.get_value() is None or number_two.get_value() is None:  # no execute no true
+                    tmp_result.set_value(False)
+                else:
+                    tmp_result.set_value(number_one.get_value() and number_two.get_value())
+            else:
+                tmp_result.set_value(num(number_one.get_value()) & num(number_two.get_value()))
         elif cac_flag == 7:
             tmp_result.set_value(num(number_one.get_value()) << num(number_two.get_value()))
         return tmp_result, None, None, None
@@ -266,7 +278,7 @@ def single_elem_calculation_factory(cac_flag):
 
 
 def compare_expression(arguments, kernel_codes, main_memory, global_env, local_env):
-    result_tmp = DataType('bool')
+    result_tmp = DataType('i1')
     oper_dict = {
         'eq': lambda x, y: x == y,
         'ne': lambda x, y: x != y,
