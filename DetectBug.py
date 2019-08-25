@@ -4,6 +4,15 @@ from MainProcess import construct_memory_execute_mode_for_barrier
 from MainProcess import construct_memory_execute_mode_dynamically
 from MainProcess import parse_target_memory_and_checking_sync, parse_target_memory_and_checking_sync_dynamically
 import random
+import time
+
+
+def time_cost(target_func):
+    def _new_func():
+        start_time = time.time()
+        target_func()
+        print time.time() - start_time
+    return _new_func
 
 
 def count_star(target_str):
@@ -41,6 +50,7 @@ def parse_function(target_file):
     return global_env
 
 
+@time_cost
 def test_copy_low_upp():
     test_block = Block((-1, -1, 0), (2, 3, 1))
     test_thread = Thread((-1, -1, 0), (5, 5, 1))
@@ -709,11 +719,11 @@ def test_kaldi_repair_add_mat():
 
 
 if __name__ == "__main__":
-    test_kaldi_repair_add_mat()
+    # test_kaldi_repair_add_mat()
     # test_arrayfire_reduce()
     # test_device_global()
     # global_test_env = parse_function("./kaldi-new-bug/new-func.ll")
-    # test_copy_low_upp()
+    test_copy_low_upp()
     # test_copy_upp_low()
     # test_add_diag_vec_mat()
     # test_copy_from_tp()
