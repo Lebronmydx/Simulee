@@ -1,65 +1,108 @@
-
-
-The population and generation is setting at generate_initialized_setting@Evolution.py, line 339.  We can see from below experiment that arguments have
-little impact to the performance of algorithm.
-
-
----------------------------------------------------------------------
-
-1  device_global@Gklee_Test/read_write_race0.cu   0.627186059952
-2  _add_diag_vec_mat@kaldi/cu-kernels.cu          1.89538502693
-3  _copy_low_upp@kaldi/cu-kernels.cu              1.59333300591
-4  _splice@kaldi/cu-kernels.cu                    1.93862199783
-5  _copy_upp_low@kaldi/cu-kernels.cu              1.47234892845
-6  Join@gunrock/join.cuh                          6.25341415405
-7  c_smo_solve_kernel@thundersvm/smo-kernels.cu   7.8977749348
-8  kTile@cuda-convnet2/nvmatrix_kernels.cu        2.0280020237
-9  kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  1.58654117584
-10 _trace_mat_mat_trans@kaldi/cu-kernels.cu       3.75331711769
-11 convolve2@arrayfire/convolve.hpp               4.3802690506
-
-
-arguments: {
+Kernel Functions                                                Time Cost   
+-----------------------------------------------------------------------------
+(arguments: {
     population: 50,
-    generation: 3
-}
+    generation: 10
+})
 
----------------------------------------------------------------------
+_add_diag_vec_mat @ kaldi / 5cc9731af4f                         1.86799001694                                                             
+select_matches @ arrayfire / dfbfca5fb77                        2.47328090668                         
+_copy_low_upp @ kaldi / 5cc9731af4f                             1.27812194824
+_copy_upp_low @ kaldi / 5cc9731af4f                             1.6650788784
+_copy_from_tp @ kaldi / 5cc9731af4f                             1.5354039669
+_copy_from_mat @ kaldi / 5cc9731af4f                            1.54439401627
+colonel @ GkleeTests / 10eb6373d53                              3.98319387436
+device_global @ GkleeTests / 10eb6373d53                        2.27219200134
+harris_response @ arrayfire / faefa30c3a0                       2.56979703903   
+computeMedian @ arrayfire / 31761d27f01                         1.72148609161  
+hamming_matcher(second one) @ arrayfire / 1050816e422           1.69808793068
+computeDescriptor @ arrayfire / ee4d0bd77d7                     8.86907196045
+warp_reduce @ arrayfire / c59116e3ec3                           4.52692699432        
+JacobiSVD @ arrayfire / d7abcf2358e                             21.1835160255
+hamming_matcher_unroll(second one) @ arrayfire / 0e0c726d7d0    1.32066082954    
+hamming_matcher(first one) @ arrayfire / 0c5a38182b7            11.2586197853   (can be detected under this setting)
+hamming_matcher_unroll(first one) @ arrayfire / 0c5a38182b7     11.4852559566
+scan_nonfinal_kernel @ arrayfire / a7a297ba814                  1.23483896255
+scan_dim_nonfinal_kernel @ arrayfire / a7a297ba814              2.85071110725
+dl@deadlock_2 @ GkleeTests / 10eb6373d53                        8.0066409111
+dl@deadlock_0 @ GkleeTests / 10eb6373d53                        6.62813901901
+scan_dim_kernel @ arrayfire / a515b112076                       11.4673950672
+_add_diag_mat_mat @ kaldi / bc13196e7fe                         50.3923330307
+nu_smo_solve_kernel @ thundersvm / febf515a826                  3.33526301384
+c_smo_solve_kernel @ thundersvm / 05de37f83b6                   8.94646191597
+warp_reduce @ arrayfire / 0d0d7d1285a                           5.86924910545 
+Join @ gunrock / 248a12107ef                                    5.35884213448
+_sum_reduce @ kaldi / 5cc9731af4f                               0.279884815216
+_splice @ kaldi / 5cc9731af4f                                   1.96658396721
 
-1  device_global@Gklee_Test/read_write_race0.cu   0.336097002029
-2  _add_diag_vec_mat@kaldi/cu-kernels.cu          2.3871281147
-3  _copy_low_upp@kaldi/cu-kernels.cu              0.82728099823
-4  _splice@kaldi/cu-kernels.cu                    1.16035079956
-5  _copy_upp_low@kaldi/cu-kernels.cu              1.14414095879
-6  Join@gunrock/join.cuh                          2.89437294006
-7  c_smo_solve_kernel@thundersvm/smo-kernels.cu   4.28621101379
-8  kTile@cuda-convnet2/nvmatrix_kernels.cu        0.474329948425
-9  kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  0.762001037598
-10 _trace_mat_mat_trans@kaldi/cu-kernels.cu       2.00656104088
-11 convolve2@arrayfire/convolve.hpp               1.73516201973
+-----------------------------------------------------------------------------
+(arguments: {
+    population: 50,
+    generation: 20
+})
 
+_add_diag_vec_mat @ kaldi / 5cc9731af4f                         3.17569208145                                                            
+select_matches @ arrayfire / dfbfca5fb77                        7.21897506714                     
+_copy_low_upp @ kaldi / 5cc9731af4f                             0.953813076019 
+_copy_upp_low @ kaldi / 5cc9731af4f                             2.68287801743
+_copy_from_tp @ kaldi / 5cc9731af4f                             1.31434011459
+_copy_from_mat @ kaldi / 5cc9731af4f                            3.40102720261    
+colonel @ GkleeTests / 10eb6373d53                              8.6675350666  
+device_global @ GkleeTests / 10eb6373d53                        4.58804106712   
+harris_response @ arrayfire / faefa30c3a0                       7.64147901535  
+computeMedian @ arrayfire / 31761d27f01                         3.17763996124
+hamming_matcher(second one) @ arrayfire / 1050816e422           1.62913203239   
+computeDescriptor @ arrayfire / ee4d0bd77d7                     17.1118991375 
+warp_reduce @ arrayfire / c59116e3ec3                           9.24935698509    
+JacobiSVD @ arrayfire / d7abcf2358e                             12.0625860691 
+hamming_matcher_unroll(second one) @ arrayfire / 0e0c726d7d0    1.31874108315    
+hamming_matcher(first one) @ arrayfire / 0c5a38182b7            21.0751531124   (can be detected under this setting)    
+hamming_matcher_unroll(first one) @ arrayfire / 0c5a38182b7     21.0379087925 
+scan_nonfinal_kernel @ arrayfire / a7a297ba814                  1.23242306709  
+scan_dim_nonfinal_kernel @ arrayfire / a7a297ba814              3.17150998116  
+dl@deadlock_2 @ GkleeTests / 10eb6373d53                        17.3127901554    
+dl@deadlock_0 @ GkleeTests / 10eb6373d53                        14.8992497921       
+scan_dim_kernel @ arrayfire / a515b112076                       4.41730189323   
+_add_diag_mat_mat @ kaldi / bc13196e7fe                         116.819747925 
+nu_smo_solve_kernel @ thundersvm / febf515a826                  4.21478796005
+c_smo_solve_kernel @ thundersvm / 05de37f83b6                   8.63504099846
+warp_reduce @ arrayfire / 0d0d7d1285a                           13.0587611198
+Join @ gunrock / 248a12107ef                                    5.39749312401
+_sum_reduce @ kaldi / 5cc9731af4f                               0.282721996307
+_splice @ kaldi / 5cc9731af4f                                   5.34727787971
 
-arguments: {
-    population: 20,
-    generation: 3
-}
+-----------------------------------------------------------------------------
+(arguments: {
+    population: 40,
+    generation: 40
+})
 
----------------------------------------------------------------------
-
-1  device_global@Gklee_Test/read_write_race0.cu   0.564728021622
-2  _add_diag_vec_mat@kaldi/cu-kernels.cu          0.358702898026
-3  _copy_low_upp@kaldi/cu-kernels.cu              1.38759613037
-4  _splice@kaldi/cu-kernels.cu                    1.14744997025
-5  _copy_upp_low@kaldi/cu-kernels.cu              0.894185066223
-6  Join@gunrock/join.cuh                          1.15443992615
-7  c_smo_solve_kernel@thundersvm/smo-kernels.cu   3.07424712181
-8  kTile@cuda-convnet2/nvmatrix_kernels.cu        2.01954483986
-9  kDotProduct@cuda-convnet2/nvmatrix_kernels.cu  0.587056159973
-10 _trace_mat_mat_trans@kaldi/cu-kernels.cu       6.58713102341
-11convolve2@arrayfire/convolve.hpp               1.78001308441
-
-
-arguments: {
-    population: 10,
-    generation: 10,
-}
+_add_diag_vec_mat @ kaldi / 5cc9731af4f                         2.87276101112                                                            
+select_matches @ arrayfire / dfbfca5fb77                        19.0567469597                        
+_copy_low_upp @ kaldi / 5cc9731af4f                             1.65974092484 
+_copy_upp_low @ kaldi / 5cc9731af4f                             1.1076529026
+_copy_from_tp @ kaldi / 5cc9731af4f                             2.3149740696
+_copy_from_mat @ kaldi / 5cc9731af4f                            4.16750884056        
+colonel @ GkleeTests / 10eb6373d53                              27.0120048523
+device_global @ GkleeTests / 10eb6373d53                        6.6378891468        
+harris_response @ arrayfire / faefa30c3a0                       18.871243
+computeMedian @ arrayfire / 31761d27f01                         4.96229505539  
+hamming_matcher(second one) @ arrayfire / 1050816e422           1.49021601677   
+computeDescriptor @ arrayfire / ee4d0bd77d7                     27.8881621361  
+warp_reduce @ arrayfire / c59116e3ec3                           22.0899100304    
+JacobiSVD @ arrayfire / d7abcf2358e                             30.2640910149 
+hamming_matcher_unroll(second one) @ arrayfire / 0e0c726d7d0    1.01164507866    
+hamming_matcher(first one) @ arrayfire / 0c5a38182b7            34.0034151077   (can be detected under this setting)    
+hamming_matcher_unroll(first one) @ arrayfire / 0c5a38182b7     33.5241570473 
+scan_nonfinal_kernel @ arrayfire / a7a297ba814                  1.26536917686  
+scan_dim_nonfinal_kernel @ arrayfire / a7a297ba814              3.23156309128
+dl@deadlock_2 @ GkleeTests / 10eb6373d53                        37.0928931236    
+dl@deadlock_0 @ GkleeTests / 10eb6373d53                        30.618678093    
+scan_dim_kernel @ arrayfire / a515b112076                       6.00646400452   
+_add_diag_mat_mat @ kaldi / bc13196e7fe                         157.164261103
+nu_smo_solve_kernel @ thundersvm / febf515a826                  2.94927406311
+c_smo_solve_kernel @ thundersvm / 05de37f83b6                   7.58495497704
+warp_reduce @ arrayfire / 0d0d7d1285a                           32.1105110645
+Join @ gunrock / 248a12107ef                                    4.50222086906
+_sum_reduce @ kaldi / 5cc9731af4f                               0.245944023132
+_splice @ kaldi / 5cc9731af4f                                   1.77173686028
