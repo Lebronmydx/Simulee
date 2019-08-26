@@ -15,13 +15,13 @@ colonel @ GkleeTests / 10eb6373d53                              3.98319387436
 device_global @ GkleeTests / 10eb6373d53                        2.27219200134
 harris_response @ arrayfire / faefa30c3a0                       2.56979703903   
 computeMedian @ arrayfire / 31761d27f01                         1.72148609161  
-hamming_matcher(second one) @ arrayfire / 1050816e422           1.69808793068
+hamming_matcher @ arrayfire / 1050816e422                       1.69808793068
 computeDescriptor @ arrayfire / ee4d0bd77d7                     8.86907196045
 warp_reduce @ arrayfire / c59116e3ec3                           4.52692699432        
 JacobiSVD @ arrayfire / d7abcf2358e                             21.1835160255
-hamming_matcher_unroll(second one) @ arrayfire / 0e0c726d7d0    1.32066082954    
-hamming_matcher(first one) @ arrayfire / 0c5a38182b7            11.2586197853   (can be detected under this setting)
-hamming_matcher_unroll(first one) @ arrayfire / 0c5a38182b7     11.4852559566
+hamming_matcher_unroll @ arrayfire / 0e0c726d7d0                1.32066082954    
+hamming_matcher @ arrayfire / 0c5a38182b7                       11.2586197853   (can be detected under this setting)
+hamming_matcher_unroll @ arrayfire / 0c5a38182b7                11.4852559566
 scan_nonfinal_kernel @ arrayfire / a7a297ba814                  1.23483896255
 scan_dim_nonfinal_kernel @ arrayfire / a7a297ba814              2.85071110725
 dl@deadlock_2 @ GkleeTests / 10eb6373d53                        8.0066409111
@@ -51,13 +51,13 @@ colonel @ GkleeTests / 10eb6373d53                              8.6675350666
 device_global @ GkleeTests / 10eb6373d53                        4.58804106712   
 harris_response @ arrayfire / faefa30c3a0                       7.64147901535  
 computeMedian @ arrayfire / 31761d27f01                         3.17763996124
-hamming_matcher(second one) @ arrayfire / 1050816e422           1.62913203239   
+hamming_matcher @ arrayfire / 1050816e422                       1.62913203239   
 computeDescriptor @ arrayfire / ee4d0bd77d7                     17.1118991375 
 warp_reduce @ arrayfire / c59116e3ec3                           9.24935698509    
 JacobiSVD @ arrayfire / d7abcf2358e                             12.0625860691 
-hamming_matcher_unroll(second one) @ arrayfire / 0e0c726d7d0    1.31874108315    
-hamming_matcher(first one) @ arrayfire / 0c5a38182b7            21.0751531124   (can be detected under this setting)    
-hamming_matcher_unroll(first one) @ arrayfire / 0c5a38182b7     21.0379087925 
+hamming_matcher_unroll @ arrayfire / 0e0c726d7d0                1.31874108315    
+hamming_matcher @ arrayfire / 0c5a38182b7                       21.0751531124   (can be detected under this setting)    
+hamming_matcher_unroll @ arrayfire / 0c5a38182b7                21.0379087925 
 scan_nonfinal_kernel @ arrayfire / a7a297ba814                  1.23242306709  
 scan_dim_nonfinal_kernel @ arrayfire / a7a297ba814              3.17150998116  
 dl@deadlock_2 @ GkleeTests / 10eb6373d53                        17.3127901554    
@@ -87,13 +87,13 @@ colonel @ GkleeTests / 10eb6373d53                              27.0120048523
 device_global @ GkleeTests / 10eb6373d53                        6.6378891468        
 harris_response @ arrayfire / faefa30c3a0                       18.871243
 computeMedian @ arrayfire / 31761d27f01                         4.96229505539  
-hamming_matcher(second one) @ arrayfire / 1050816e422           1.49021601677   
+hamming_matcher @ arrayfire / 1050816e422                       1.49021601677   
 computeDescriptor @ arrayfire / ee4d0bd77d7                     27.8881621361  
 warp_reduce @ arrayfire / c59116e3ec3                           22.0899100304    
 JacobiSVD @ arrayfire / d7abcf2358e                             30.2640910149 
-hamming_matcher_unroll(second one) @ arrayfire / 0e0c726d7d0    1.01164507866    
-hamming_matcher(first one) @ arrayfire / 0c5a38182b7            34.0034151077   (can be detected under this setting)    
-hamming_matcher_unroll(first one) @ arrayfire / 0c5a38182b7     33.5241570473 
+hamming_matcher_unroll @ arrayfire / 0e0c726d7d0                1.01164507866    
+hamming_matcher @ arrayfire / 0c5a38182b7                       34.0034151077   (can be detected under this setting)    
+hamming_matcher_unroll @ arrayfire / 0c5a38182b7                33.5241570473 
 scan_nonfinal_kernel @ arrayfire / a7a297ba814                  1.26536917686  
 scan_dim_nonfinal_kernel @ arrayfire / a7a297ba814              3.23156309128
 dl@deadlock_2 @ GkleeTests / 10eb6373d53                        37.0928931236    
