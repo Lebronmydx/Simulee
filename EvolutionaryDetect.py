@@ -266,7 +266,7 @@ def test_arrayfire_JacobiSVD():
 
 
 def test_arrayfire_reduce1():
-    auto_test_target_function_dynamical("./arrayfire-repair/reduce.ll", "@_Z11warp_reducePiPj", {
+    auto_test_target_function_dynamical("./arrayfire-repair/reduce1.ll", "@_Z11warp_reducePiPj", {
         "global": "%s_ptr",
         "shared": None
     }, fixed_dimension=[(1, 1, 1), (34, 1, 1)], used_default_dimension=True)
@@ -323,8 +323,8 @@ if __name__ == "__main__":
     # test_arrayfire_compute_median()
     # test_arrayfire_hamming_matcher_2()
     # test_arrayfire_descriptor()  #
-    # test_arrayfire_reduce1()  # recompile barrier divergence version
-    test_arrayfire_JacobiSVD()
+    test_arrayfire_reduce1()  # recompile barrier divergence version
+    # test_arrayfire_JacobiSVD()
     # test_arrayfire_hamming_matcher_unroll_2()
     # test_arrayfire_hamming_matcher_1()
     # test_arrayfire_hamming_matcher_unroll_1()
