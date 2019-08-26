@@ -311,7 +311,7 @@ def dummy_data_for_shared_memory_hamming3(global_env):
 if __name__ == "__main__":
     # test_convnet2_kTile()
     # test_add_diag_vec_mat() # need evolution
-    # test_arrayfire_select_matches()
+    test_arrayfire_select_matches()
     # test_copy_low_upp()
     # test_copy_upp_low()
     # test_copy_from_tp()  # need evolution
@@ -323,7 +323,7 @@ if __name__ == "__main__":
     # test_arrayfire_compute_median()
     # test_arrayfire_hamming_matcher_2()
     # test_arrayfire_descriptor()  #
-    test_arrayfire_reduce1()  # recompile barrier divergence version
+    # test_arrayfire_reduce1()  # recompile barrier divergence version
     # test_arrayfire_JacobiSVD()
     # test_arrayfire_hamming_matcher_unroll_2()
     # test_arrayfire_hamming_matcher_1()

@@ -453,23 +453,23 @@ def auto_test_target_function_dynamical(target_file_path, function_name, main_me
             current_time = time.time()
             print "Current solution total cost time is " + str(current_time - start_time)
     if not executed:
-        item = solution_lst[0]
-        global_env = parse_function(target_file_path)
-        generate_memory_container(main_memory.keys(), global_env)
-        if initial_function is not None:
-            global_env = initial_function(global_env)
-        raw_code = global_env.get_value(function_name)
-        blocks = item[0].blocks
-        threads = item[0].threads
-        arguments = item[0].construct_running_arguments()
-        for idx, variable in enumerate(raw_code.argument_lst):
-            if variable not in arguments and raw_code.type_lst[idx].find("*") == -1:
-                arguments[variable] = 2  # temp action, need more focus
-        arguments = generate_arguments(global_env.get_value(function_name), arguments)
-        arguments["main_memory"] = main_memory
-        execute_framework_dynamical(blocks, threads, raw_code.raw_codes, arguments, global_env)
-        current_time = time.time()
-        print "Current solution total cost time is " + str(current_time - start_time)
+        for item in solution_lst:
+            global_env = parse_function(target_file_path)
+            generate_memory_container(main_memory.keys(), global_env)
+            if initial_function is not None:
+                global_env = initial_function(global_env)
+            raw_code = global_env.get_value(function_name)
+            blocks = item[0].blocks
+            threads = item[0].threads
+            arguments = item[0].construct_running_arguments()
+            for idx, variable in enumerate(raw_code.argument_lst):
+                if variable not in arguments and raw_code.type_lst[idx].find("*") == -1:
+                    arguments[variable] = 2  # temp action, need more focus
+            arguments = generate_arguments(global_env.get_value(function_name), arguments)
+            arguments["main_memory"] = main_memory
+            execute_framework_dynamical(blocks, threads, raw_code.raw_codes, arguments, global_env)
+            current_time = time.time()
+            print "Current solution total cost time is " + str(current_time - start_time)
 
 
 def auto_test_target_function_advanced(target_file_path, function_name, main_memory,
