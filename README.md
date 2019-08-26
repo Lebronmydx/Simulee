@@ -23,6 +23,13 @@ The kernel function is related to table 4 in performance.log.
 In EvolutionaryDetect.py, all functions start with "test_" are detecting synchronization bugs and related to a specify kernel function. You will need Python 2.7 to run them. No other dependency is needed.
 
 ### Detailed instruction
+GkleeTests:
+```
+test_device_global()
+test_colenel()
+test_gklee_barrier1()
+test_gklee_barrier3()
+```
 arrayfire:
 ```
 test_arrayfire_scan_nofinal_kernel()
