@@ -11,7 +11,7 @@ Total： 10 Bugs
 | ------------- | --------------------------- | ----------------------------------------------- |
 | cudpp         | 3                           |https://github.com/cudpp/cudpp/issues/180        |
 | CudaSift      | 4                           |https://github.com/Celebrandil/CudaSift/issues/38|
-| gunrock       | 2                           |https://github.com/gunrock/gunrock/issues/452    |
+| gunrock       | 1                           |https://github.com/gunrock/gunrock/issues/452    |
 | kaldi         | 1                           |https://github.com/kaldi-asr/kaldi/issues/3029   |
 | kaldi         | 1                           |https://github.com/kaldi-asr/kaldi/issues/3036   | 
 
